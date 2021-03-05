@@ -51,6 +51,9 @@ public class Main {
         hotel.addRoom(new Room(204, "2-BED-QUEEN", RoomStatus.CLEAN));
         hotel.addRoom(new Room(205, "2-BED-QUEEN", RoomStatus.DIRTY));
 
+        hotel.setPools(2);
+        hotel.setGyms(1);
+
         return hotel;
     }
 
@@ -62,6 +65,8 @@ public class Main {
         ArrayList<Room> rooms = hotel.getRooms();
 
         System.out.println("Total rooms: " + rooms.size());
+        System.out.println("Total pools: " + hotel.getPools());
+        System.out.println("Total gyms: " + hotel.getGyms());
         System.out.println();
         System.out.println("Room statuses");
         for (Room room : rooms) {
